@@ -46,7 +46,7 @@ function Hamburguesa(id, nombre, precio, tipo, stock) {
     this.id = id
     this.nombre = nombre
     this.precio = precio
-    this.detalle = tipo
+    this.tipo = tipo
     this.stock = stock
 
     this.restarStock = (cantidad) => {
@@ -58,16 +58,20 @@ const hamburguesas = [
     new Hamburguesa(1, "Veggie", 800, "comida", 12),
     new Hamburguesa(2, "Italiana", 850, "comida", 10),
     new Hamburguesa(3, "Queso grillado", 870, "comida", 15),
-    new Hamburguesa(4, "Crazy chicken", 820, "comida", 14),
+    new Hamburguesa(4, "Queso azul", 820, "comida", 14),
     new Hamburguesa(5, "Big kiro", 900, "comida", 15),
-    new Hamburguesa(6, "Classic", 750, "comida", 15),
-    new Hamburguesa(7, "Kiro bacon", 770, "comida", 10),
-    new Hamburguesa(8, "Agua", 200, "bebida", 20),
-    new Hamburguesa(9, "Gaseosa", 250, "bebida", 12),
-    new Hamburguesa(10, "Cerveza", 800, "bebida", 12),
+    new Hamburguesa(6, "Classic", 750, "comida", 15), 
+    new Hamburguesa(7, "Agua", 200, "bebida", 20),
+    new Hamburguesa(8, "Gaseosa", 250, "bebida", 12),
+    new Hamburguesa(9, "Cerveza", 300, "bebida", 12),
 ]
-//menu de hamburguesas
+// Metodo filter mostrar solo como funciona, no interactua con el resto del codigo
+    const comid = hamburguesas.filter(burger=> burger.tipo == "comida")
+    const bebid = hamburguesas.filter(drinks => drinks.tipo == "bebida")
+    console.log(comid)
+    console.log(bebid)
 
+// funciones para mostrar menu, que la hamburguesa vaya al carrito
 function Menu() {
     this.hamburguesas = []
     
@@ -80,7 +84,7 @@ function Menu() {
     }
 
     this.mostrarMenu = () => {
-        return this.hamburguesas.map(hamburguesa => `${hamburguesa.id}. ${hamburguesa.nombre}`).join("\n")
+        return this.hamburguesas.map(hamburguesa => `${hamburguesa.id}. ${hamburguesa.nombre} `).join("\n")
     }
 }
 
@@ -132,14 +136,19 @@ while(end !== "si"){
     let resultado = carrito.agregarAlCarrito(id, cantidad)
     
     while(!resultado){
-        const nuevaCantidad = Number(prompt(
-        "Selecciona una nueva cantidad"
-        ))
+        const nuevaCantidad = Number(prompt("Selecciona una nueva cantidad"))
         resultado = carrito.agregarAlCarrito(id, nuevaCantidad)
     }
 
 //indicar si para terminar con la compra
-    end = prompt("Escribe si cuando haya terminado de elegir sus hamburguesas")?.toLowerCase()
+    end = prompt("Escribe si cuando haya terminado de elegir sus hamburguesas").toLowerCase()
 }
 //Total de los productos seleccionados. Y ademas indica cuanto sale cada una.
-alert(`El total de su compra es: $${carrito.total}. \n Has comprado: ${carrito.mostrarCompra()}\nMuchas gracias por su compra que lo disfrute`)
+alert(`El total de su compra es: $${carrito.total}. \n Has comprado: ${carrito.mostrarCompra()}`)
+
+//para finalizar se le va a solicitar al usuario su nombre y un email para contactarnos con ellos
+
+let nombre = prompt("Ingrese su nombre")
+let email = prompt("Ingrese su email")
+
+alert(`Muchas gracias por su compra ${nombre} por medio de su email ${email} nos pondremos en contacto con usted!`)
