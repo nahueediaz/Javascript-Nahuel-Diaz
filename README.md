@@ -8,8 +8,10 @@
 
 ## Desafio-incorporar-arrays-(Desafio-3)
 
-- En este proyecto incorpore arrays y objetos haciendo un eccomerce de una hamburgueseria
+- En este proyecto incorpore arrays y objetos haciendo un eccomerce de una hamburgueseria.
 
 ## Desafio-Primer-pre-entrega
+
+- Agregue cambios a mi pagina del proyecto, le agregue estilos con css y bootstrap.
 
 - Utilice funciones, objetos y arreglos. Inclui metodos de busqueda.
