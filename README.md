@@ -15,3 +15,9 @@
 - Agregue cambios a mi pagina del proyecto, le agregue estilos con css y bootstrap.
 
 - Utilice funciones, objetos y arreglos. Inclui metodos de busqueda.
+
+## Desafio-complementario:-Incorporar-eventos
+
+- En este desafio inclui dom, utilzando un forEach y que desde Js se haga clones de los diferentes productos.
+
+- Comente el resto del codigo para el desafio del evento eliminar los prompt y los alert.
