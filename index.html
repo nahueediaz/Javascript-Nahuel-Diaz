@@ -22,113 +22,17 @@
         </nav>
     </header>
     <main>
-        <div class="container">
-            <h1 class="text-center text-white">Nuestras hamburguesas</h1>
-            <div class="row justify-content-around w-100">
-                <div class="card">
-                    <img src="./Imagenes/veggie-burger-royalty-free-image-1613386528_.jfif" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Veggie</h5>
-                        <p class="card-text">Pan de espinaca, medallon vegetariano, tomate, queso, cebolla.</p>
-                        <div class="addCarrito">
-                            <h4 class="precio">$800</h4>
-                            <a href="" class="btn btn-primary">Agregar al carrito</a>
-                        </div>
-                    </div>
+        <section id="contenedor-productos" class="card">
+            <template>
+                <div class="product-card" id="productos">
+                    <h3 class="titulo">Producto</h3>
+                    <p class="precio">precio</p>
+                    <p class="texto">detalle</p>
+                    <button class="btn btn-primary" id="addCarrito">Agregar al carrito</button>
                 </div>
-                <div class="card col-6">
-                    <img src="./Imagenes/Italian-Burger-Recipe-2-of-3.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Burger italiana</h5>
-                        <p class="card-text">Burger, muzzarella, tomate asado, rucula y alioli verde.</p>
-                        <div class="addCarrito">
-                            <h4 class="precio">$850</h4>
-                            <a href="" class="btn btn-primary">Agregar al carrito</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="./Imagenes/Queso grillado.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Burger queso grillado</h5>
-                        <p class="card-text">Burger con provoleta a la plancha, morrones asados, cebolla frita, rucula.</p>
-                        <div class="addCarrito">
-                            <h4 class="precio">$870</h4>
-                            <a href="" class="btn btn-primary">Agregar al carrito</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="./Imagenes/Queso azul.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Burger blue cheese</h5>
-                        <p class="card-text">Burger, cebolla dulce, mayonesa, queso azul, sesamo tostado.</p>
-                        <div class="addCarrito">
-                            <h4 class="precio">$820</h4>
-                            <a href="" class="btn btn-primary">Agregar al carrito</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="./Imagenes/big kiro.jfif" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Big kiro</h5>
-                        <p class="card-text">Doble burger, cheddar, ceboola caramelizada.</p>
-                        <div class="addCarrito">
-                            <h4 class="precio">$900</h4>
-                            <a href="" class="btn btn-primary">Agregar al carrito</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="./Imagenes/Classic-Classic-Burger.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Burger classic</h5>
-                        <p class="card-text">Burger, pepinillos, tomate, lechuga, mayonesa de morrones</p>
-                        <div class="addCarrito">
-                            <h4 class="precio">$750</h4>
-                            <a href="" class="btn btn-primary">Agregar al carrito</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row justify-content-around w-100">
-                <div>
-                    <h1 class="text-center text-white"> Nuestras bebidas</h1>
-                </div>
-                <div class="card ">
-                    <img src="./Imagenes/Agua.webp" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Agua</h5>
-                        <div class="addCarrito">
-                            <h4 class="precio">$200</h4>
-                            <a href="" class="btn btn-primary">Agregar al carrito</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="./Imagenes/pepsi.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Gaseosa</h5>
-                        <div class="addCarrito">
-                            <h4 class="precio">$250</h4>
-                            <a href="" class="btn btn-primary">Agregar al carrito</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="./Imagenes/cerveza.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Cerveza</h5>
-                        <div class="addCarrito">
-                            <h4 class="precio">$300</h4>
-                            <a href="" class="btn btn-primary">Agregar al carrito</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div>
+            </template>
+        </section> 
+        <section id="contenedor-formulario">
             <div>
                 <h2 class="text-center text-white">Llene con sus datos</h2>
             </div>
@@ -151,6 +55,7 @@
                 </form>
             </div>
         </div>
+        </section>   
     </main>
     <footer>
         <p>Probá nuestras deliciosas hamburguesas.</p>
