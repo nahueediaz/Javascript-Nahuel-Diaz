@@ -32,6 +32,45 @@
                 </div>
             </template>
         </section> 
+        <!-- Comienzo carrito -->
+        <section class="container-carrito">
+            <div class="container">
+                <h1 class="text-center text-white tituloCarrito">CARRITO</h1>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="carrito-titulo">
+                            <h6 class="text-white-50">Producto</h6>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="carrito-titulo">
+                            <h6 class="text-truncate text-white-50">Precio</h6>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="carrito-titulo">
+                            <h6 class="text-white-50">Cantidad</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ? sumar productos Carrito -->
+            <div class="carrito-add container" id="carrito-add">
+            </div>
+            <!-- Total -->
+            <div class="row ">
+                <div class="col-12 d-flex justify-content-evenly">
+                    <div class=" d-flex align-items-center">
+                        <p class="mb-0 text-white">Total</p>
+                        <p class="ml-3 mb-0 sumaCarrito text-white"> $0</p>
+                        </div>
+                        <button class="btn btn-success mb-3 ml-auto comprarButton" type="button" data-toggle="modal"
+                            data-target="#comprarModal">Comprar</button>
+                    </div>
+                </div>
+            </div>
+
+                
         <section id="contenedor-formulario">
             <div>
                 <h2 class="text-center text-white">Llene con sus datos</h2>
@@ -55,7 +94,7 @@
                 </form>
             </div>
         </div>
-        </section>   
+        </section> 
     </main>
     <footer>
         <p>Probá nuestras deliciosas hamburguesas.</p>
