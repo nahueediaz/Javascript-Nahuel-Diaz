@@ -16,8 +16,12 @@
 
 - Utilice funciones, objetos y arreglos. Inclui metodos de busqueda.
 
-## Desafio-complementario:-Incorporar-eventos
+## Desafio-complementario:-Interactuar-HTML
 
 - En este desafio inclui dom, utilzando un forEach y que desde Js se haga clones de los diferentes productos.
 
 - Comente el resto del codigo para el desafio del evento eliminar los prompt y los alert.
+
+## Desafio-Incorporar-Eventos
+
+- Agregue eventos para agregar y remover elementos a mi carrito
