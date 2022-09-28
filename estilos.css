@@ -1,10 +1,11 @@
 .navbar{
     background-color: black;
 }
-
-#contenedor-productos{
+#contenedor-principal{
     background: rgb(49,72,135);
     background: radial-gradient(circle, rgba(49,72,135,1) 0%, rgba(25,43,25,1) 100%);
+}
+#contenedor-productos{
     width: 100%;
     margin: 0;
     padding: 12px;
@@ -21,8 +22,16 @@
     border-radius: 8px;
 }
 
+.card{
+    background: none;
+}
+
 .titulo{
     text-align: center;
+}
+
+.imagen{
+    width: 100px;
 }
 
 .texto{
@@ -37,9 +46,13 @@
     text-align: justify;
 }
 
+.carrito-titulo h6{
+    font-size: 22px;
+    font-style: italic;
+}
+
 #contenedor-formulario{
-    background: rgb(160,180,76);
-    background: radial-gradient(circle, rgba(160,180,76,1) 0%, rgba(0,0,0,1) 100%);
+
     margin: 0;
 }
 #formulario{
@@ -74,10 +87,6 @@ form{
     font-size: 18px;
 }
 
-.container-carrito{
-    background: rgb(70,97,62);
-    background: radial-gradient(circle, rgba(70,97,62,1) 0%, rgba(40,35,35,1) 100%);
-}
 footer{
     background-color: black;
 }
