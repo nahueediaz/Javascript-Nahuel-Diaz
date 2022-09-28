@@ -22,79 +22,79 @@
         </nav>
     </header>
     <main>
-        <section id="contenedor-productos" class="card">
-            <template>
-                <div class="product-card" id="productos">
-                    <h3 class="titulo">Producto</h3>
-                    <p class="precio">precio</p>
-                    <p class="texto">detalle</p>
-                    <button class="btn btn-primary" id="addCarrito">Agregar al carrito</button>
-                </div>
-            </template>
-        </section> 
-        <!-- Comienzo carrito -->
-        <section class="container-carrito">
-            <div class="container">
-                <h1 class="text-center text-white tituloCarrito">CARRITO</h1>
-                <div class="row">
-                    <div class="col-6">
-                        <div class="carrito-titulo">
-                            <h6 class="text-white-50">Producto</h6>
-                        </div>
+        <section id="contenedor-principal">
+            <section id="contenedor-productos" class="card">
+                <template>
+                    <div class="product-card" id="productos">
+                        <h3 class="titulo">Producto</h3>
+                        <p class="precio">precio</p>
+                        <p class="texto">detalle</p>
+                        <button class="btn btn-primary" id="addCarrito">Agregar al carrito</button>
                     </div>
-                    <div class="col-2">
-                        <div class="carrito-titulo">
-                            <h6 class="text-truncate text-white-50">Precio</h6>
+                </template>
+            </section> 
+            <!-- Comienzo carrito -->
+            <section class="container-carrito">
+                <div class="container">
+                    <h1 class="text-center text-white tituloCarrito">CARRITO</h1>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="carrito-titulo">
+                                <h6 class="text-white-50">Producto</h6>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-4">
-                        <div class="carrito-titulo">
-                            <h6 class="text-white-50">Cantidad</h6>
+                        <div class="col-2">
+                            <div class="carrito-titulo">
+                                <h6 class="text-truncate text-white-50">Precio</h6>
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <!-- ? sumar productos Carrito -->
-            <div class="carrito-add container" id="carrito-add">
-            </div>
-            <!-- Total -->
-            <div class="row ">
-                <div class="col-12 d-flex justify-content-evenly">
-                    <div class=" d-flex align-items-center">
-                        <p class="mb-0 text-white">Total</p>
-                        <p class="ml-3 mb-0 sumaCarrito text-white"> $0</p>
+                        <div class="col-4">
+                            <div class="carrito-titulo">
+                                <h6 class="text-white-50">Cantidad</h6>
+                            </div>
                         </div>
-                        <button class="btn btn-success mb-3 ml-auto comprarButton" type="button" data-toggle="modal"
-                            data-target="#comprarModal">Comprar</button>
                     </div>
                 </div>
+                <!-- ? sumar productos Carrito -->
+                <div class="carrito-add container" id="carrito-add">
+                </div>
+                <!-- Total -->
+                <div class="row ">
+                    <div class="col-12 d-flex justify-content-evenly">
+                        <div class=" d-flex align-items-center">
+                            <p class="mb-0 text-white">Total</p>
+                            <p class="ml-3 mb-0 sumaCarrito text-white"> $0</p>
+                            </div>
+                            <button class="btn btn-success mb-3 ml-auto comprarButton" type="button" data-toggle="modal"
+                                data-target="#comprarModal">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+            <section id="contenedor-formulario">
+                <div>
+                    <h2 class="text-center text-white">Llene con sus datos</h2>
+                </div>
+                <div id="formulario">
+                    <form action="">
+                        <div>
+                            <p class="textoForm">Complete para contactarnos con usted y finalizar la compra.</p>
+                        </div>
+                        <div class="mb-2 form-group">
+                            <label for="Nombre" class="textName text-black m-2"> Nombre completo:</label>
+                            <input type="text" placeholder="Escribe tu nombre" id="Nombre" class="form-control m-2">
+                        </div>
+                        <div class="mb-2 form-group">
+                            <label for="Email" class="textEmail text-black m-2">Email:</label>
+                            <input type="email" id="Email" placeholder="Escribe tu email" class="form-control m-2">
+                        </div>
+                        <div class="mb-3 form-group">
+                            <button type="submit" class="btn btn-primary m-2">Enviar</button>
+                        </div>
+                    </form>
+                </div>
             </div>
-
-                
-        <section id="contenedor-formulario">
-            <div>
-                <h2 class="text-center text-white">Llene con sus datos</h2>
-            </div>
-            <div id="formulario">
-                <form action="">
-                    <div>
-                        <p class="textoForm">Complete para contactarnos con usted y finalizar la compra.</p>
-                    </div>
-                    <div class="mb-2 form-group">
-                        <label for="Nombre" class="textName text-black m-2"> Nombre completo:</label>
-                        <input type="text" placeholder="Escribe tu nombre" id="Nombre" class="form-control m-2">
-                    </div>
-                    <div class="mb-2 form-group">
-                        <label for="Email" class="textEmail text-black m-2">Email:</label>
-                        <input type="email" id="Email" placeholder="Escribe tu email" class="form-control m-2">
-                    </div>
-                    <div class="mb-3 form-group">
-                        <button type="submit" class="btn btn-primary m-2">Enviar</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-        </section> 
+            </section> 
+        </section>
     </main>
     <footer>
         <p>Probá nuestras deliciosas hamburguesas.</p>
