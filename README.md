@@ -25,3 +25,7 @@
 ## Desafio-Incorporar-Eventos
 
 - Agregue eventos para agregar y remover elementos a mi carrito
+
+## Segunda-Pre-Entrega
+
+- Agregue Json y local storage al proyecto.
