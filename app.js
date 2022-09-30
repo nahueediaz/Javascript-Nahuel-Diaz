@@ -8,10 +8,6 @@ function Hamburguesa(id, nombre, precio, tipo, stock, detalle,imagen) {
     this.stock = stock
     this.detalle = detalle
     this.imagen = imagen
-
-    this.restarStock = (cantidad) => {
-    this.stock -= cantidad
-    }
 }
 
 let hamburguesas = [
@@ -125,13 +121,22 @@ function añadirItem (itemTitulo, itemPrecio){
 
     const anteriorEstado = JSON.parse(localStorage.getItem('carrito'))
     const productoAgregar = hamburguesas.find(hamburguesa => hamburguesa.nombre == itemTitulo)
-    if (anteriorEstado){
+
+// Operador ternario para  reducir codigo y spread operator
+anteriorEstado ? localStorage.setItem("carrito", JSON.stringify([...anteriorEstado, productoAgregar]))
+:
+localStorage.setItem("carrito", JSON.stringify([productoAgregar]))
+
+//Codigo reducido
+/*    if (anteriorEstado){
     localStorage.setItem("carrito", JSON.stringify([...anteriorEstado, productoAgregar]))
     }
     else {
         localStorage.setItem("carrito", JSON.stringify([productoAgregar]))
     }
+*/
 }
+
 //Funcion para sumar carrito
 
 function carritoTotal(){
@@ -165,10 +170,11 @@ function removerProducto (event){
 
 function cantidadCarrito(event){
     const inputCarrito = event.target
+
     if (inputCarrito.value <= 0 ){
         inputCarrito.value = 1
     }
-    carritoTotal() //JSON
+    carritoTotal() 
 }
 
 // Funcion para limpiar carrito al hacer click en comprar
