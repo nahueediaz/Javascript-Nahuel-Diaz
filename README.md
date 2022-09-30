@@ -29,3 +29,11 @@
 ## Segunda-Pre-Entrega
 
 - Agregue Json y local storage al proyecto.
+
+## Desafio-complementario:-Optimizando-proyecto-final
+
+- Agregue operadores logicos:
+
+- Operador ternario: reducir if, else
+
+- Spread operator
