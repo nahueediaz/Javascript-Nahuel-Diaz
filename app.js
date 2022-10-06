@@ -52,7 +52,7 @@ crear (hamburguesas)
 
 //Eventos 
 
-const carritoButtons = document.querySelectorAll('#addCarrito')
+const carritoButtons = document.querySelectorAll('#carritoButton')
 carritoButtons.forEach((carritoButton) => {
     carritoButton.addEventListener('click', carritoClicked)
 });
@@ -149,7 +149,6 @@ menuBurgers.forEach(menuBurger => {
     const sumaPrecio = Number(sumaPrecioCont.textContent.replace("$", ""))
     const cantidadCont = menuBurger.querySelector(".cantidad")
     const cantidad = Number(cantidadCont.value)
-
     total = total + sumaPrecio * cantidad
 })
 
@@ -163,7 +162,6 @@ function removerProducto (event){
     buttonClick.closest(".menuBurger").remove()
     carritoTotal()
     
-
 
 }
 //Evento change para modificar cantidad de los productos
@@ -181,4 +179,23 @@ function cantidadCarrito(event){
 function comprarButtonClicked(){
     carritoAdds.innerHTML = ""
     carritoTotal()
-}
+
+// Si el carrito esta vacio 
+    if (carritoTotal.total =  "0"){
+        Swal.fire({
+            icon: 'error',
+            title: 'Error',
+            text: 'Seleccione un producto a comprar !'
+            })
+    }
+    // Si se completa la compra
+    else{
+        Swal.fire({
+            icon: 'success',
+            title: 'Haz completado la compra !',
+            text: 'Recibiras los detalles por email. Por favor ingrese su correo!'
+            })
+    }
+    }
+
+
