@@ -20,6 +20,11 @@
     padding: 18px;
     margin: 12px;
     border-radius: 8px;
+    height: 500px;
+}
+img{
+    width: 300px;
+    height: 250px;
 }
 
 .card{
@@ -30,9 +35,6 @@
     text-align: center;
 }
 
-.imagen{
-    width: 100px;
-}
 
 .texto{
     text-align: justify;
@@ -51,41 +53,6 @@
     font-style: italic;
 }
 
-#contenedor-formulario{
-
-    margin: 0;
-}
-#formulario{
-    display: flex;
-    justify-content: center;
-}
-form{
-    width:900px;
-    background: rgb(195,161,34);
-    background: radial-gradient(circle, rgba(195,161,34,1) 0%, rgba(68,67,87,1) 100%);
-    border-radius: 12px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 20px;
-}
-
-.form-control{
-    width: 300px;
-}
-
-.textoForm{
-    text-align: center;
-    margin-top: 20px;
-    font-size: 20px;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    letter-spacing: 1.5px;
-    color: whitesmoke;
-}
-
-.textName, .textEmail{
-    font-size: 18px;
-}
 
 footer{
     background-color: black;
