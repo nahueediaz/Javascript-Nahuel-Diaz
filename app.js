@@ -1,4 +1,32 @@
+let contenedor = document.getElementById("contenedor-productos")
+// Uso de fetch
+fetch("/data.json")
+.then((res)=>res.json())
+.then((data) => {
+    data.forEach((hamburguesa)=>{
+        const li = document.createElement("div")
+        li.classList.add ("contenedor-cards")
+        const cardMenu = `<div class="product-card row" id="productos">
+        <h3 class="titulo">${hamburguesa.nombre}</h3>
+        <p class="precio">${hamburguesa.precio}</p>
+        <img src="${hamburguesa.imagen}" alt="">
+        <p class="texto">${hamburguesa.detalle}</p>
+        <button class="btn btn-primary" id="carritoButton">Agregar al carrito</button>
+        `
+        li.innerHTML = cardMenu
+        contenedor.append(li)
 
+// Eventos- Boton-Añadir al carrito 
+        const carritoButtons = document.querySelectorAll('#carritoButton')
+console.log(carritoButtons)
+carritoButtons.forEach((carritoButton) => {
+    carritoButton.addEventListener('click', carritoClicked)
+});
+    })
+})
+
+
+/*
 //ecommcerce de compra de hamburguesas
 function Hamburguesa(id, nombre, precio, tipo, stock, detalle,imagen) {
     this.id = id
@@ -49,10 +77,11 @@ function crear (carta){
 }
 
 crear (hamburguesas)
-
+*/
 //Eventos 
 
 const carritoButtons = document.querySelectorAll('#carritoButton')
+console.log(carritoButtons)
 carritoButtons.forEach((carritoButton) => {
     carritoButton.addEventListener('click', carritoClicked)
 });
@@ -116,7 +145,7 @@ function añadirItem (itemTitulo, itemPrecio){
     carritoRow.querySelector(".cantidad").addEventListener("change", cantidadCarrito)
 
     carritoTotal()
-
+/*
     // JSON para que guarde informacion del carrito 
 
     const anteriorEstado = JSON.parse(localStorage.getItem('carrito'))
@@ -126,7 +155,7 @@ function añadirItem (itemTitulo, itemPrecio){
 anteriorEstado ? localStorage.setItem("carrito", JSON.stringify([...anteriorEstado, productoAgregar]))
 :
 localStorage.setItem("carrito", JSON.stringify([productoAgregar]))
-
+*/
 //Codigo reducido
 /*    if (anteriorEstado){
     localStorage.setItem("carrito", JSON.stringify([...anteriorEstado, productoAgregar]))
@@ -179,23 +208,20 @@ function cantidadCarrito(event){
 function comprarButtonClicked(){
     carritoAdds.innerHTML = ""
     carritoTotal()
-
-// Si el carrito esta vacio 
-    if (carritoTotal.total =  "0"){
-        Swal.fire({
-            icon: 'error',
-            title: 'Error',
-            text: 'Seleccione un producto a comprar !'
-            })
-    }
-    // Si se completa la compra
-    else{
+        const  {value: email } = Swal.fire({
+            title: 'Ingrese su email para finalizar',
+            input: 'email',
+            inputLabel: 'Para comunicarnos con usted ingrese su email',
+            inputPlaceholder: 'Email'
+        })
+console.log(email)
+    if (email) {
         Swal.fire({
             icon: 'success',
-            title: 'Haz completado la compra !',
-            text: 'Recibiras los detalles por email. Por favor ingrese su correo!'
-            })
+            title: 'Felicitaciones! El pedido fue tomado',
+            text: 'Le enviaremos un email con los detalles de la compra y su seguimiento.',
+        })
     }
-    }
-
+}
+    
 
