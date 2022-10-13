@@ -37,3 +37,7 @@
 - Operador ternario: reducir if, else
 
 - Spread operator
+
+## Desafio fetch en tu proyecto
+
+- Añadi fetch al desafio
