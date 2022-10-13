@@ -1,0 +1,11 @@
+[
+    {"id" : 1, "nombre": "Veggie", "precio": 800, "detalle" : "Pan de espinaca, medallon vegetariano, tomate, queso, cebolla.", "imagen": "./Imagenes/veggie.jfif"},
+    {"id" : 2, "nombre": "Italiana" , "precio": 850, "detalle": "Burger, muzzarella, tomate asado, rucula y alioli verde.", "imagen": "./Imagenes/italiana.jpg"},
+    {"id" : 3, "nombre": "Queso Grillado", "precio":870 , "detalle": "Burger con provoleta a la plancha, morrones asados, cebolla frita, rucula.", "imagen": "./Imagenes/Queso-grillado.jpg"},
+    {"id" : 4, "nombre": "Queso azul", "precio": 820, "detalle": "Burger, cebolla dulce, mayonesa, queso azul, sesamo tostado.", "imagen": "./Imagenes/Queso-azul.jpg"},
+    {"id" : 5, "nombre": "Big kiro", "precio":900 ,"detalle": "Doble burger, cheddar, cebolla caramelizada.", "imagen": "./Imagenes/big-kiro.jfif"},
+    {"id" : 6, "nombre": "Classic", "precio": 750, "detalle": "Burger, pepinillos, tomate, lechuga, mayonesa de morrones" ,"imagen": "./Imagenes/classic.jpg" },
+    {"id" : 7, "nombre": "Agua", "precio": 200, "detalle": "Agua", "imagen": "./Imagenes/Agua.webp"},
+    {"id" : 8, "nombre": "Gaseosa", "precio":250 , "detalle": "Pepsi, fanta, sprite.", "imagen":"./Imagenes/pepsi.jpg" },
+    {"id" : 9, "nombre": "Cerveza", "precio": 300, "detalle": "Brahama, Heinneken, Andes." , "imagen": "./Imagenes/cerveza.jpg"}
+]
