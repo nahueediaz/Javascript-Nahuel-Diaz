@@ -1,6 +1,6 @@
 let contenedor = document.getElementById("contenedor-productos")
 // Uso de fetch
-fetch("/data.json")
+fetch("./data.json")
 .then((res)=>res.json())
 .then((data) => {
     data.forEach((hamburguesa)=>{
