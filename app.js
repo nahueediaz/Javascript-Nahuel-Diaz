@@ -1,9 +1,21 @@
 let contenedor = document.getElementById("contenedor-productos")
-// Uso de fetch
-fetch("/data.json")
-.then((res)=>res.json())
-.then((data) => {
-    data.forEach((hamburguesa)=>{
+
+async function fetchHamburguesas(){
+    const respuest = await fetch('./data.json')
+    return await respuest.json()
+}
+
+let menu = []
+// LLamo al json mediante fetch y luego llamo a la funcion para nuestro menu 
+fetchHamburguesas().then(hamburguesas => {
+    menu = hamburguesas
+
+    mostrarMenu()
+})
+
+//Funcion para llamar a nuestro menu... DOM 
+function mostrarMenu(){
+    for (hamburguesa of menu){
         const li = document.createElement("div")
         li.classList.add ("contenedor-cards")
         const cardMenu = `<div class="product-card row" id="productos">
@@ -16,75 +28,14 @@ fetch("/data.json")
         li.innerHTML = cardMenu
         contenedor.append(li)
 
-// Eventos- Boton-Añadir al carrito 
+        // Eventos- Boton-Añadir al carrito 
         const carritoButtons = document.querySelectorAll('#carritoButton')
 console.log(carritoButtons)
 carritoButtons.forEach((carritoButton) => {
     carritoButton.addEventListener('click', carritoClicked)
 });
-    })
-})
-
-
-/*
-//ecommcerce de compra de hamburguesas
-function Hamburguesa(id, nombre, precio, tipo, stock, detalle,imagen) {
-    this.id = id
-    this.nombre = nombre
-    this.precio = precio
-    this.tipo = tipo
-    this.stock = stock
-    this.detalle = detalle
-    this.imagen = imagen
+    }
 }
-
-let hamburguesas = [
-    new Hamburguesa(1, "Veggie", 800, "comida", 12, "Pan de espinaca, medallon vegetariano, tomate, queso, cebolla.", ),
-    new Hamburguesa(2, "Italiana", 850, "comida", 10, "Burger, muzzarella, tomate asado, rucula y alioli verde."),
-    new Hamburguesa(3, "Queso grillado", 870, "comida", 15,"Burger con provoleta a la plancha, morrones asados, cebolla frita, rucula.", "./Imagenes/Queso grillado.jpg"),
-    new Hamburguesa(4, "Queso azul", 820, "comida", 14, "Burger, cebolla dulce, mayonesa, queso azul, sesamo tostado."),
-    new Hamburguesa(5, "Big kiro", 900, "comida", 15, "Doble burger, cheddar, cebolla caramelizada."),
-    new Hamburguesa(6, "Classic", 750, "comida", 15, "Burger, pepinillos, tomate, lechuga, mayonesa de morrones"), 
-    new Hamburguesa(7, "Agua", 200, "bebida", 20, "Agua"),
-    new Hamburguesa(8, "Gaseosa", 250, "bebida", 12, "Pepsi, fanta, sprite"),
-    new Hamburguesa(9, "Cerveza", 300, "bebida", 12, "Brahama, Heinneken"),
-]
-
-//DOM 
-
-let contenedor = document.getElementById("contenedor-productos")
-let temp = document.querySelector("template")
-let card = temp.content.querySelector("div")
-
-function crear (carta){
-    contenedor.innerHTML = ""
-
-    carta.forEach(hamburguesa => {
-        let clonarMenu = card.cloneNode(true)
-        contenedor.appendChild(clonarMenu)
-
-
-        //Nombre del producto
-        clonarMenu.children[0].innerText = hamburguesa.nombre
-
-        //precio
-
-        clonarMenu.children[1].innerText = hamburguesa.precio
-
-        // detalle de las burger
-        clonarMenu.children[2].innerText = hamburguesa.detalle
-    });
-}
-
-crear (hamburguesas)
-*/
-//Eventos 
-
-const carritoButtons = document.querySelectorAll('#carritoButton')
-console.log(carritoButtons)
-carritoButtons.forEach((carritoButton) => {
-    carritoButton.addEventListener('click', carritoClicked)
-});
 
 //Boton comprar
 
@@ -103,6 +54,8 @@ function carritoClicked (event){
     const itemPrecio = item.querySelector (".precio").textContent
 
     añadirItem(itemTitulo, itemPrecio)
+
+    alertify.success('Success notification message.'); 
 }
 //DOM 
 function añadirItem (itemTitulo, itemPrecio){
@@ -206,22 +159,16 @@ function cantidadCarrito(event){
 
 // Funcion para limpiar carrito al hacer click en comprar
 function comprarButtonClicked(){
-    carritoAdds.innerHTML = ""
-    carritoTotal()
-        const  {value: email } = Swal.fire({
-            title: 'Ingrese su email para finalizar',
-            input: 'email',
-            inputLabel: 'Para comunicarnos con usted ingrese su email',
-            inputPlaceholder: 'Email'
-        })
-console.log(email)
-    if (email) {
+
         Swal.fire({
             icon: 'success',
             title: 'Felicitaciones! El pedido fue tomado',
             text: 'Le enviaremos un email con los detalles de la compra y su seguimiento.',
         })
+
+        carritoAdds.innerHTML = ""
+        carritoTotal()
     }
-}
+
     
 
