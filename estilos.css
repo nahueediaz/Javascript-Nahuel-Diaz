@@ -68,3 +68,28 @@ footer p{
     font-style: italic;
     letter-spacing: 2px;
 }
+
+
+.fond {
+    background-image: linear-gradient(to top, #f43b47 0%, #453a94 100%);
+    min-height: 100vh; }
+    .fond .tit__contact h1 {
+        font-size: 40px;
+        margin: 20px 0px;
+        color: whitesmoke;
+        text-align: center;
+        letter-spacing: 5px; }
+
+        .form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+th{
+    letter-spacing: 4px;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 80px;
+}
