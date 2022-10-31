@@ -1,5 +1,6 @@
 let contenedor = document.getElementById("contenedor-productos")
 
+
 async function fetchHamburguesas(){
     const respuest = await fetch('./data.json')
     return await respuest.json()
@@ -37,12 +38,6 @@ carritoButtons.forEach((carritoButton) => {
     }
 }
 
-//Boton comprar
-
-const comprarButton = document.querySelector(".comprarButton")
-comprarButton.addEventListener("click", comprarButtonClicked)
-
-
 const carritoAdds = document.querySelector(".carrito-add")
 
 //Aca agregue evento para que el boton de añadir carrito funcione
@@ -55,7 +50,6 @@ function carritoClicked (event){
 
     añadirItem(itemTitulo, itemPrecio)
 
-    alertify.success('Success notification message.'); 
 }
 //DOM 
 function añadirItem (itemTitulo, itemPrecio){
@@ -100,10 +94,8 @@ function añadirItem (itemTitulo, itemPrecio){
     carritoTotal()
 /*
     // JSON para que guarde informacion del carrito 
-
     const anteriorEstado = JSON.parse(localStorage.getItem('carrito'))
     const productoAgregar = hamburguesas.find(hamburguesa => hamburguesa.nombre == itemTitulo)
-
 // Operador ternario para  reducir codigo y spread operator
 anteriorEstado ? localStorage.setItem("carrito", JSON.stringify([...anteriorEstado, productoAgregar]))
 :
@@ -156,19 +148,3 @@ function cantidadCarrito(event){
     }
     carritoTotal() 
 }
-
-// Funcion para limpiar carrito al hacer click en comprar
-function comprarButtonClicked(){
-
-        Swal.fire({
-            icon: 'success',
-            title: 'Felicitaciones! El pedido fue tomado',
-            text: 'Le enviaremos un email con los detalles de la compra y su seguimiento.',
-        })
-
-        carritoAdds.innerHTML = ""
-        carritoTotal()
-    }
-
-    
-
